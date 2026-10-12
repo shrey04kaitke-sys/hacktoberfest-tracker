@@ -26,4 +26,4 @@ Create a public GitHub repository, push these files to the `main` branch, then o
 - Official Hacktoberfest rules can include extra requirements about eligible repositories and contributions.
 - The GitHub Student Developer Pack may include useful developer tools and services; availability can change.
 
-**Live demo:** _add your GitHub Pages link here_
+**Live demo:** https://shrey04kaitke-sys.github.io/hacktoberfest-tracker/
