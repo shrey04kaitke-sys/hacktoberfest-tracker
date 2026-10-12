@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacktoberfest Progress Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <p class="eyebrow">Open source progress</p>
+      <h1>Hacktoberfest Progress Tracker</h1>
+      <p class="intro">See how your GitHub pull requests are moving toward your monthly goal.</p>
+    </header>
+
+    <form id="progress-form">
+      <div class="form-grid">
+        <label>
+          GitHub username
+          <input id="username" name="username" type="text" autocomplete="username" required>
+        </label>
+        <label>
+          Month
+          <input id="month" name="month" type="month" required>
+        </label>
+        <label>
+          Goal
+          <input id="goal" name="goal" type="number" min="1" max="50" value="6" required>
+        </label>
+      </div>
+      <button id="submit-button" type="submit">Check progress</button>
+    </form>
+
+    <p id="error" class="message error" role="alert" hidden></p>
+    <section id="results" hidden aria-live="polite">
+      <div class="progress-heading">
+        <div>
+          <p class="eyebrow">Your progress</p>
+          <h2 id="progress-count">0 / 6 pull requests</h2>
+        </div>
+        <strong id="progress-percent">0%</strong>
+      </div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Pull request progress">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <p id="friendly-message" class="friendly-message"></p>
+
+      <div class="stats">
+        <div class="stat"><span id="merged-count">0</span><small>Merged</small></div>
+        <div class="stat"><span id="open-count">0</span><small>Open</small></div>
+        <div class="stat"><span id="closed-count">0</span><small>Closed</small></div>
+      </div>
+
+      <h2 class="list-heading">Your pull requests</h2>
+      <ul id="pr-list" class="pr-list"></ul>
+    </section>
+
+    <footer>
+      This only counts PRs you opened in the chosen month. Official Hacktoberfest has extra rules, so check the
+      <a href="https://hacktoberfest.com/" target="_blank" rel="noopener noreferrer">official site</a> for the final count.
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
